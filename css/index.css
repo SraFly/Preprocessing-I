@@ -107,10 +107,6 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -134,8 +130,13 @@ html,
 body {
   height: 100%;
 }
-.hover-mix {
-  border: 1px solid orchid;
+.mixin-color {
+  color: purple;
+}
+.mixin-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 header nav {
   width: 100%;
@@ -156,9 +157,10 @@ header nav a:hover {
 }
 @media (max-width: 500px) {
   header nav {
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 section {
@@ -166,8 +168,23 @@ section {
   font-size: 1.4rem;
   padding: 3%;
 }
+section img {
+  width: 30%;
+  display: flex;
+}
 section h2 {
   font-size: 1.8rem;
   color: purple;
   padding-top: 3%;
+}
+@media (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  section img {
+    margin: 0 auto;
+  }
 }
